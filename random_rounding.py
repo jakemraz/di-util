@@ -6,14 +6,15 @@ import math
 def execute(filename, params):
         
     index = params[0]
-    round_position = params[1]
+    round_position = int(params[1])
+    before_round = math.pow(0.1, round_position)
+    after_round = math.pow(10, round_position)
     result = []
     
     with open(filename, newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            print(row[index], -1 * int(round_position))
-            row[index] = round(int(row[index]), -1 * int(round_position))
+            row[index] = int(math.floor(int(row[index]) * before_round) * after_round)
             result.append(row)
             
     return result
