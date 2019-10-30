@@ -17,7 +17,7 @@ def main():
         lines = rmfield.execute(sys.argv)
     # add code here
     
-    # 13. 랜덤라운딩 -> 반올림으로 일단
+    # 13. 랜덤라운딩 -> 정수형 숫자를 내림 ex)1964 -> 1960 or 1900
     if (cmd == 'random_rounding'):
         if (len(params) == 0):
             print('round needs more params : <filename.csv> <command> <index_field_name ex:name> <round position ex:2>')

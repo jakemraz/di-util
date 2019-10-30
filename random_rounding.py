@@ -18,22 +18,3 @@ def execute(filename, params):
             result.append(row)
             
     return result
-
-    
-    # new_lines = ''
-    # for line in lines:
-    #     line = line.replace('\n','')
-    #     record = line.split(',')
-    #     if len(record) <= index:
-    #         break
-    #     del record[index]
-    #     new_line = ','.join(record)
-    #     new_lines = ''.join([new_lines, new_line,'\n'])
-        
-
-#     return new_lines
-
-
-
-
-
