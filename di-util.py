@@ -17,14 +17,12 @@ def main():
         lines = rmfield.execute(sys.argv)
     # add code here
     
-    # 13. 랜덤라운딩
-    if (cmd == 'random_rounding'):
+    # 13. 랜덤라운딩 -> 반올림으로 일단
+    if (cmd == 'round'):
         if (len(params) == 0):
-            print('random_rounding needs more params : <filename.csv> <command> <index ex:0> <round position ex:2>')
+            print('round needs more params : <filename.csv> <command> <index_field_name ex:name> <round position ex:2>')
             exit()
         result = random_rounding.execute(filename, params)
-        
-    print(result)
         
 
     with open('result.csv', 'w', newline='') as csvfile:
@@ -34,14 +32,6 @@ def main():
         for row in result:
             writer.writerow(row)
         
-
-#     output_filename = 'newfile.csv'
-
-#     with open(output_filename,'w') as file:
-#         file.writelines(lines)
-
-#     pass
-
 
 # python3 di-util.py <data.csv> <aggregation> 
 if __name__ == "__main__":
