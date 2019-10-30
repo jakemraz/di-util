@@ -13,7 +13,7 @@ def execute(filename, params):
     with open(filename, newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            row[index] = str(range_num * math.floor(int(row[index]) / range_num)) + '-' + str((range_num+1) * math.floor(int(row[index]) / range_num))
+            row[index] = str(range_num * math.floor(int(row[index]) / range_num)) + '~' + str((range_num+1) * math.floor(int(row[index]) / range_num))
             result.append(row)
             
     return result
