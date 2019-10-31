@@ -10,6 +10,7 @@ def main():
     filename = sys.argv[1]
     cmd = sys.argv[2]
     params = sys.argv[3:]
+    result = []
 
     #lines = locals()['rmfield'].execute(sys.argv)
 
@@ -31,7 +32,6 @@ def main():
             print('data_range needs more params : <index_field_name ex:name> <start_num> <range_num>')
             exit()
         result = data_range.execute(filename, params)
-        
 
     with open('result.csv', 'w', newline='') as csvfile:
         fieldnames = result[0]
